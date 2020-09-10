@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/styleswebsite.css">
+        {% block head %}
+        <title>Lugué - Aluguel de Carros</title>
+        {% endblock %}
+
+    </head>
+
+    <body>
+        {% include "parts/header.njk" %}
+
+        {% block content %}{% endblock %}
+
+        <div class="links" id="links-footer">
+        {% for link in about.links %}
+            <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        {% endfor %}
+
+        </div>
+        {% include "parts/footer.njk" %}
+    </body>
+</html>
